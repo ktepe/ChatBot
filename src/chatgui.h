@@ -28,7 +28,7 @@ public:
     ~ChatBotPanelDialog();
 
     // getter / setter
-    std::unique_ptr<ChatLogic> GetChatLogicHandle() { return std::move(_chatLogic); }
+    std::shared_ptr<ChatLogic> GetChatLogicHandle() { std::cout << "GetChatLogicHandle()" << std::endl; return std::move(_chatLogic); }
 
     // events
     void paintEvent(wxPaintEvent &evt);
@@ -89,7 +89,9 @@ public:
     DECLARE_EVENT_TABLE()
 };
 
-// wxWidgets app that hides main()
+// wxWidgets app that hides main()[InternetShortcut]
+//URL=https://classroom.udacity.com/nanodegrees/nd213/parts/cd0425/modules/7f9d39db-b7df-4964-9e1b-0fd158bc4827/lessons/3fcf7af5-84d9-4709-a084-bc3d99219119/concepts/c0807a94-6d3e-4e7e-b02b-b903d54b1b75
+
 class ChatBotApp : public wxApp
 {
 public:

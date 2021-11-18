@@ -21,7 +21,7 @@ ChatLogic::ChatLogic()
     _chatBot = new ChatBot("../images/chatbot.png");
 
     // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
-    _chatBot->SetChatLogicHandle(std::make_shared(this));
+    _chatBot->SetChatLogicHandle(this);
 
     ////
     //// EOF STUDENT CODE
